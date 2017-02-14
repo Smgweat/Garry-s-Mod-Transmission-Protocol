@@ -3,18 +3,16 @@ A (hopefully) simplistic and functional two-wire based transmissions protocol fo
 
 The following is a definition of the structure of packets in the GTP (Gmod Transmission Protocol)
 
-PACKET
-
     HEADER
         Purpose
             Hold information regarding the packet's purpose
 
-    Contents
-        Size ( 8 bits )
-        Datatype( 8 bits )
+    Contents ( 32 bits )
         Source( 8 bits )
         Destination( 8 bits )
-
+        Size ( 8 bits )
+        Datatype( 8 bits )
+        
     BODY
         Purpose
             Hold the information you are transferring
