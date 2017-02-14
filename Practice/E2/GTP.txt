@@ -1,0 +1,57 @@
+@name 3TC Protocol
+@inputs Transmit I A B Data:array
+@outputs O A B Write Data:array State:string Segment
+@persist A_Prev State:string Segment Sent Address Locked
+
+# A is to initiate and trigger, O is out, I is in, and B terminates a transmission
+
+if(first()){
+    State = "Idle"
+    runOnTick(1)
+    Address = 1
+}
+
+Target = 2
+
+switch(State){
+    case "Idle",
+        if(Locked & B) {Locked = 0}
+        elseif(!Locked){
+        B = 0
+        Write = 0
+        if(A){State = "Check"}
+        elseif(Transmit){State = "Initialize"}
+        }
+    break
+    
+    #Reception Protocol
+    case "Check",
+        Write = 1
+        if(I == Address) {State = "Recieve"}
+        else {State = "Idle", Locked = 1}
+    break
+    case "Recieve",
+        Write = 1
+        if(A & !A_Prev) {Data = Data:add(array(I))}
+        if(B) {State = "Idle"}
+    break
+    
+    #Transmission Protocol
+    case "Initialize",
+        if(!Sent) {Sent = 1, O = Target} 
+        else {
+        A = 1 State = "Transmit", Sent = 0}
+    break
+    case "Transmit",
+        if(!A_Prev & !Sent){
+            Segment += 1
+            O = Data[Segment,number]
+            Sent = 1
+        }
+        elseif (!A_Prev & Sent) { A = 1 }
+        elseif (A_Prev) { A = 0, Sent = 0 }
+        if(Segment > Data:count()){Segment = 0, State = "Idle",B = 1}
+    break
+}
+
+A_Prev = A
