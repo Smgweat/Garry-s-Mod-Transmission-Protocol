@@ -1,0 +1,5 @@
+
+The word is the basic unit of data in the GTP.
+All data is compresed into words in order to be transmitted.
+
+Each word contains 32 bits in the form of an integer.
