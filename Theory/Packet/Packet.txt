@@ -5,10 +5,10 @@ PACKET
             Hold information regarding the packet's purpose
 
     Contents
+    	Source( 8 bits )
+        Destination( 8 bits )
         Size ( 8 bits )
         Datatype( 8 bits )
-        Source( 8 bits )
-        Destination( 8 bits )
 
     BODY
         Purpose
