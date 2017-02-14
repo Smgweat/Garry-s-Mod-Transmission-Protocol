@@ -9,6 +9,7 @@ PACKET
         Destination( 8 bits )
         Size ( 8 bits )
         Datatype( 8 bits )
+	Total Size: 1 word
 
     BODY
         Purpose
@@ -26,4 +27,4 @@ PACKET
                 Each group of 12 bytes represents one 3-vector, with each section of 4 being an integer
 	
 	Content
-		Data( 0-255 bits )
+		Data( 0-255 words )

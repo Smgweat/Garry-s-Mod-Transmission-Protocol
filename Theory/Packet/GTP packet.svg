@@ -136,7 +136,7 @@
      <g class="com.sun.star.drawing.TextShape">
       <g id="id11">
        <rect class="BoundingBox" stroke="none" fill="none" x="3540" y="14462" width="14479" height="4065"/>
-       <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="1270px" font-weight="400"><tspan class="TextPosition" x="5591" y="15738"><tspan fill="rgb(0,0,0)" stroke="none">Body ( 0-255 bits )</tspan></tspan></tspan></text>
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="1270px" font-weight="400"><tspan class="TextPosition" x="5591" y="15738"><tspan fill="rgb(0,0,0)" stroke="none">Body ( 0-255 words )</tspan></tspan></tspan></text>
       </g>
      </g>
      <g class="com.sun.star.drawing.TextShape">
