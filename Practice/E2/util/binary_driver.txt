@@ -1,0 +1,27 @@
+@name binary driver
+
+#returns binary string, leftmost digit is most significant (32 bit)
+function string toBin( Number ) {
+    if( Number > 2^32-1 || Number < 0 ) { error( "Number out of range: " + Number ) }
+    local TempNum = Number
+    local BinString = ""
+    for( I = 0, 31 ) {
+        local Power = 31-I
+        if( 2^Power <= TempNum ) {
+            TempNum -= 2^Power
+            BinString = BinString + "1"
+        } else {
+            BinString = BinString + "0"
+        }
+    }
+    return BinString
+}
+
+function normal fromBin( S:string ) {
+    local IncNum = 0
+    for( I = 1,32 ) {
+        local Power = 32-I #31-0
+        if( S[I]=="1" ) { IncNum += 2^Power }
+    }
+    return IncNum
+}
