@@ -1,0 +1,99 @@
+@name Garry's Mod Transmission Protocol
+@inputs Transmit I A Signal:array
+@outputs O A Data:array Return:string State:string
+@persist A_Prev State:string Data:array Segment Sent Address Locked Expected_Length
+
+if(first()){
+    State = "Idle"
+    runOnTick(1)
+    Address = 2
+    
+    function array toPacket(Func_Data:array, Target_Address)
+    {
+        local First_Char = (Address << 24) + (Target_Address << 16) + ((Func_Data:count() + 1) << 8)
+        local Final_Array = array(First_Char)
+        Final_Array:add(Func_Data)
+        return Final_Array
+    }
+    
+}
+   
+# Unvalidated Communication Protocol
+switch(State){
+    case "Idle",
+        if(Locked) {Locked = 0} # ! This does not work as intended !
+        elseif(!Locked){
+            Expected_Length = 0
+            O = 0
+            if(A){State = "Check", Data = array()}
+            elseif(Transmit){State = "Initialize", Data = array()}
+            Sent = 0
+        }
+    break
+    
+    
+    #Reception Protocol
+    case "Check",
+        Expected_Length = ((I << 16) >> 24)
+        if((I << 8) >> 24 == Address) {State = "Recieve", Return = "Busy", A = 0}
+        else {State = "Idle", Locked = 1}
+    break
+    
+    case "Recieve",
+        if(A & !A_Prev)
+        {
+            Data:pushNumber(I)
+        }
+        
+        if(Data:count() == Expected_Length) # ! This does not work as intended !
+        {
+            State = "Idle"
+            Return = "Reception Success"
+        }
+        elseif (Data:count() > Expected_Length)
+        {
+            State = "Idle",
+            Return = "Reception Failure"
+        } 
+    break
+    
+    
+    #Transmission Protocol
+    case "Initialize",
+        if(!Sent)
+        {
+            Data = toPacket(Signal, 2)
+            Segment += 1
+            Sent = 1
+            O = Data[Segment,number]
+        } else { A = 1 State = "Transmit", Return = "Busy", Sent = 0}
+    break
+    
+    case "Confirm",
+        if(!A_Prev & !Sent){
+            O = Data:count() - 1
+            Sent = 1
+        }
+        elseif (!A_Prev & Sent) { A = 1, State = "Transmit", Return = "Busy"}
+        elseif (A_Prev) { A = 0, Sent = 0}
+    break
+    
+    case "Transmit",
+        if (!A_Prev & !Sent) {
+            Segment += 1
+            O = Data[Segment,number]
+            Sent = 1
+        }
+        elseif (!A_Prev & Sent) { A = 1 }
+        elseif (A_Prev) { A = 0, Sent = 0 }
+        if(Segment > Data:count()){
+            A = 0
+            Segment = 0
+            State = "Idle"
+            Return = "Transmission Success"
+        }
+    break
+}
+
+A_Prev = A
+
