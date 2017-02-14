@@ -1,0 +1,16 @@
+The following are features to be added or that are currently being worked on.
+
+1.  Packet division,
+      Dividing large payloads into manageable and transferrable packets.
+      
+2.  TCP / UDP style protocol,
+      Allowing packets to be sent unconfirmed, or require confirmation.
+      
+3.  Encryption,
+      Either for use of checksums to prevent data corruption or to avoid MITM-Attack capability.
+      
+4.  Routing,
+      Using seperate systems to direct data could be potentially handle more bandwidth than an Address / Lockout system.
+      
+5.  Data Compression,
+      Reducing large ammounts of data to the minimum possible space before transmission. Eg; 4 Characters to 1 Word.
