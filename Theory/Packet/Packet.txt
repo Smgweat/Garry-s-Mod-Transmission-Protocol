@@ -9,6 +9,7 @@ PACKET
         Destination( 8 bits )
         Size ( 8 bits )
         Datatype( 8 bits )
+	Total Size: 1 word
 
     BODY
         Purpose
