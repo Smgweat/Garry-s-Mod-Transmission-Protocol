@@ -1,6 +1,6 @@
 @name string serialization lib
 
-# the maximum amount of characters that the e2 can simultaniously converted
+# the maximum amount of characters that the e2 can simultaniously convert
 # to a compressed byte array and back again is
 # 132 characters
 
