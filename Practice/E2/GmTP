@@ -1,12 +1,12 @@
 @name Garry's Mod Transmission Protocol
 @inputs Transmit I A Signal:array
-@outputs O A Data:array Return:string State:string
+@outputs O A Data:array Return:string State:string Expected_Length
 @persist A_Prev State:string Data:array Segment Sent Address Locked Expected_Length
 
 if(first()){
     State = "Idle"
-    #runOnTick(1)
-    Address = 2
+    runOnTick(1)
+    Address = 1
     
     function array toPacket(Func_Data:array, Target_Address){
         local First_Word = (Address << 24) + (Target_Address << 16) + (Func_Data:count() << 8)
@@ -17,27 +17,25 @@ if(first()){
     
 }
 
-interval(200)
-   
 # Unvalidated Communication Protocol
 switch(State){
     case "Idle",
-        if(Locked) {Locked = 0} # ! This does not work as intended !
+        if(Locked & Expected_Length > 0 & A & !A_Prev) {Expected_Length -= 1} # ! This does not work as intended !
         elseif(!Locked){
             Expected_Length = 0
             O = 0
-            if(A){State = "Check", Data = array()}
+            if(A){State = "Check"}
             elseif(Transmit){State = "Initialize"}
             Sent = 0
-        }
+        } elseif (Expected_Length == 0) {Locked = 0, Return = "Idle"}
     break
     
     
     #Reception Protocol
     case "Check",
         Expected_Length = ((I << 16) >> 24)
-        if((I << 8) >> 24 == Address) {State = "Recieve", Return = "Busy", A = 0}
-        else {State = "Idle", Locked = 1}
+        if((I << 8) >> 24 == Address) {State = "Recieve", Return = "Busy", A = 0, Data = array()}
+        else {State = "Idle", Locked = 1, Return = "Locked"}
     break
     
     case "Recieve",
@@ -63,7 +61,7 @@ switch(State){
     case "Initialize",
         if(!Sent)
         {
-            Data = toPacket(Signal, 2)
+            Data = toPacket(Signal, 1)
             Segment += 1
             Sent = 1
             O = Data[Segment,number]
