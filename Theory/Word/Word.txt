@@ -1,5 +1,1 @@
-
-The word is the basic unit of data in the GTP.
-All data is compresed into words in order to be transmitted.
-
-Each word contains 32 bits in the form of an integer.
+The basic unit of data transmitted per cycle is the word, which is just any data we want to send converted to a 32-bit integer format. We send data in this format because wire communication devices send things not in binary but in numbers.
