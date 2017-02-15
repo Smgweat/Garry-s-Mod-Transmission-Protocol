@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="37cm" height="24cm" viewBox="98 178 723 463" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <polygon style="fill: #fceed6" points="480,180 538.284,220 480,260 421.716,220 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="480,180 538.284,220 480,260 421.716,220 "/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="480" y="223.87">
+      <tspan x="480" y="223.87">Input</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #d8e5e5" x="290" y="300" width="140" height="40"/>
+    <path style="fill: #d8e5e5" d="M 290,300 A 10,10 0 0 0 280,310 L 290,310 z"/>
+    <path style="fill: #d8e5e5" d="M 440,310 A 10,10 0 0 0 430,300 L 430,310 z"/>
+    <rect style="fill: #d8e5e5" x="280" y="310" width="160" height="20"/>
+    <path style="fill: #d8e5e5" d="M 280,330 A 10,10 0 0 0 290,340 L 290,330 z"/>
+    <path style="fill: #d8e5e5" d="M 430,340 A 10,10 0 0 0 440,330 L 430,330 z"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="290" y1="300" x2="430" y2="300"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="290" y1="340" x2="430" y2="340"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 290,300 A 10,10 0 0 0 280,310"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 440,310 A 10,10 0 0 0 430,300"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="280" y1="310" x2="280" y2="330"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="440" y1="310" x2="440" y2="330"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 280,330 A 10,10 0 0 0 290,340"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 430,340 A 10,10 0 0 0 440,330"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="360" y="323.87">
+      <tspan x="360" y="323.87">Matching Address</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 440 320 C 480,320 479.453,320 479.911,269.736"/>
+    <polygon style="fill: #000000" points="479.98,262.236 484.888,272.281 479.911,269.736 474.889,272.19 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="479.98,262.236 484.888,272.281 479.911,269.736 474.889,272.19 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 421.716 220 C 351.93,220.652 360,220 360,290.264"/>
+    <polygon style="fill: #000000" points="360,297.764 355,287.764 360,290.264 365,287.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360,297.764 355,287.764 360,290.264 365,287.764 "/>
+  </g>
+  <g>
+    <path style="fill: #fceed6" d="M 542.857 300 L 657.143,300 L 680,320 L 657.143,340 L 542.857,340 L 520,320 L 542.857,300z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 542.857 300 L 657.143,300 L 680,320 L 657.143,340 L 542.857,340 L 520,320 L 542.857,300"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="600" y="323.965">
+      <tspan x="600" y="323.965">Package Data</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 538.284 220 C 616.977,220.652 600,220 600,290.264"/>
+    <polygon style="fill: #000000" points="600,297.764 595,287.764 600,290.264 605,287.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,297.764 595,287.764 600,290.264 605,287.764 "/>
+  </g>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="300" y="220">
+    <tspan x="300" y="220">Recieve</tspan>
+  </text>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="600" y="220">
+    <tspan x="600" y="220">Transmit</tspan>
+  </text>
+  <g>
+    <path style="fill: #7f7f7f" d="M 720 286.667 C 740,274.167 750,270 770,270 C 790,270 800,274.167 820,286.667 L 820,353.333 C 800,365.833 790,370 770,370 C 750,370 740,365.833 720,353.333 L 720,286.667z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 720 286.667 C 740,274.167 750,270 770,270 C 790,270 800,274.167 820,286.667 L 820,353.333 C 800,365.833 790,370 770,370 C 750,370 740,365.833 720,353.333 L 720,286.667"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 720 286.667 C 740,299.167 750,303.333 770,303.333 C 790,303.333 800,299.167 820,286.667"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="770" y="324.368">
+      <tspan x="770" y="324.368">Compressed</tspan>
+      <tspan x="770" y="340.229">Data</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="718.996" y1="320" x2="689.736" y2="320"/>
+    <polygon style="fill: #000000" points="682.236,320 692.236,315 689.736,320 692.236,325 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="682.236,320 692.236,315 689.736,320 692.236,325 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="600" y1="340" x2="600" y2="390.264"/>
+    <polygon style="fill: #000000" points="600,397.764 595,387.764 600,390.264 605,387.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,397.764 595,387.764 600,390.264 605,387.764 "/>
+  </g>
+  <g>
+    <path style="fill: #fceed6" d="M 542.857 400 L 657.143,400 L 680,420 L 657.143,440 L 542.857,440 L 520,420 L 542.857,400z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 542.857 400 L 657.143,400 L 680,420 L 657.143,440 L 542.857,440 L 520,420 L 542.857,400"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="600" y="423.965">
+      <tspan x="600" y="423.965">Send Word</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #d8e5e5" x="545.1" y="500" width="109.8" height="40"/>
+    <path style="fill: #d8e5e5" d="M 545.1,500 A 10,10 0 0 0 535.1,510 L 545.1,510 z"/>
+    <path style="fill: #d8e5e5" d="M 664.9,510 A 10,10 0 0 0 654.9,500 L 654.9,510 z"/>
+    <rect style="fill: #d8e5e5" x="535.1" y="510" width="129.8" height="20"/>
+    <path style="fill: #d8e5e5" d="M 535.1,530 A 10,10 0 0 0 545.1,540 L 545.1,530 z"/>
+    <path style="fill: #d8e5e5" d="M 654.9,540 A 10,10 0 0 0 664.9,530 L 654.9,530 z"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="545.1" y1="500" x2="654.9" y2="500"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="545.1" y1="540" x2="654.9" y2="540"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 545.1,500 A 10,10 0 0 0 535.1,510"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 664.9,510 A 10,10 0 0 0 654.9,500"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="535.1" y1="510" x2="535.1" y2="530"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="664.9" y1="510" x2="664.9" y2="530"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 535.1,530 A 10,10 0 0 0 545.1,540"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 654.9,540 A 10,10 0 0 0 664.9,530"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="600" y="523.87">
+      <tspan x="600" y="523.87">All Words Sent</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="600" y1="440" x2="600" y2="490.264"/>
+    <polygon style="fill: #000000" points="600,497.764 595,487.764 600,490.264 605,487.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,497.764 595,487.764 600,490.264 605,487.764 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 664.9 520 C 744.9,520 740,510 740,470 C 740,430 740,420 689.736,420"/>
+    <polygon style="fill: #000000" points="682.236,420 692.236,415 689.736,420 692.236,425 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="682.236,420 692.236,415 689.736,420 692.236,425 "/>
+  </g>
+  <g>
+    <path style="fill: #fceed6" d="M 542.857 600 L 657.143,600 L 680,620 L 657.143,640 L 542.857,640 L 520,620 L 542.857,600z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 542.857 600 L 657.143,600 L 680,620 L 657.143,640 L 542.857,640 L 520,620 L 542.857,600"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="600" y="623.965">
+      <tspan x="600" y="623.965">Return To Idle</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="600" y1="540" x2="600" y2="590.264"/>
+    <polygon style="fill: #000000" points="600,597.764 595,587.764 600,590.264 605,587.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,597.764 595,587.764 600,590.264 605,587.764 "/>
+  </g>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="450" y="340">
+    <tspan x="450" y="340">No</tspan>
+  </text>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="680" y="540">
+    <tspan x="680" y="540">No</tspan>
+  </text>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="620" y="560">
+    <tspan x="620" y="560">Yes</tspan>
+  </text>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="370" y="360">
+    <tspan x="370" y="360">Yes</tspan>
+  </text>
+  <g>
+    <path style="fill: #fceed6" d="M 288.571 400 L 431.429,400 L 460,420 L 431.429,440 L 288.571,440 L 260,420 L 288.571,400z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 288.571 400 L 431.429,400 L 460,420 L 431.429,440 L 288.571,440 L 260,420 L 288.571,400"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="360" y="423.965">
+      <tspan x="360" y="423.965">Add Word to Stack</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #7f7f7f" d="M 130 386.667 C 150,374.167 160,370 180,370 C 200,370 210,374.167 230,386.667 L 230,453.333 C 210,465.833 200,470 180,470 C 160,470 150,465.833 130,453.333 L 130,386.667z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 130 386.667 C 150,374.167 160,370 180,370 C 200,370 210,374.167 230,386.667 L 230,453.333 C 210,465.833 200,470 180,470 C 160,470 150,465.833 130,453.333 L 130,386.667"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 130 386.667 C 150,399.167 160,403.333 180,403.333 C 200,403.333 210,399.167 230,386.667"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="180" y="424.368">
+      <tspan x="180" y="424.368">Compressed</tspan>
+      <tspan x="180" y="440.229">Data</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="260" y1="420" x2="240.713" y2="420"/>
+    <polygon style="fill: #000000" points="233.213,420 243.213,415 240.713,420 243.213,425 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="233.213,420 243.213,415 240.713,420 243.213,425 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="360" y1="340" x2="360" y2="390.264"/>
+    <polygon style="fill: #000000" points="360,397.764 355,387.764 360,390.264 365,387.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360,397.764 355,387.764 360,390.264 365,387.764 "/>
+  </g>
+  <g>
+    <rect style="fill: #d8e5e5" x="109.7" y="500" width="140.6" height="40"/>
+    <path style="fill: #d8e5e5" d="M 109.7,500 A 10,10 0 0 0 99.7,510 L 109.7,510 z"/>
+    <path style="fill: #d8e5e5" d="M 260.3,510 A 10,10 0 0 0 250.3,500 L 250.3,510 z"/>
+    <rect style="fill: #d8e5e5" x="99.7" y="510" width="160.6" height="20"/>
+    <path style="fill: #d8e5e5" d="M 99.7,530 A 10,10 0 0 0 109.7,540 L 109.7,530 z"/>
+    <path style="fill: #d8e5e5" d="M 250.3,540 A 10,10 0 0 0 260.3,530 L 250.3,530 z"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="109.7" y1="500" x2="250.3" y2="500"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="109.7" y1="540" x2="250.3" y2="540"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 109.7,500 A 10,10 0 0 0 99.7,510"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 260.3,510 A 10,10 0 0 0 250.3,500"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="99.7" y1="510" x2="99.7" y2="530"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="260.3" y1="510" x2="260.3" y2="530"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 99.7,530 A 10,10 0 0 0 109.7,540"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 250.3,540 A 10,10 0 0 0 260.3,530"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="180" y="523.87">
+      <tspan x="180" y="523.87">All Words Received</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="180" y1="470" x2="180" y2="490.264"/>
+    <polygon style="fill: #000000" points="180,497.764 175,487.764 180,490.264 185,487.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="180,497.764 175,487.764 180,490.264 185,487.764 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 260.3 520 C 360.3,520 360,520 360,449.736"/>
+    <polygon style="fill: #000000" points="360,442.236 365,452.236 360,449.736 355,452.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360,442.236 365,452.236 360,449.736 355,452.236 "/>
+  </g>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="280" y="540">
+    <tspan x="280" y="540">No</tspan>
+  </text>
+  <text font-size="12.6887" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="200" y="560">
+    <tspan x="200" y="560">Yes</tspan>
+  </text>
+  <g>
+    <path style="fill: #fceed6" d="M 302.857 600 L 417.143,600 L 440,620 L 417.143,640 L 302.857,640 L 280,620 L 302.857,600z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 302.857 600 L 417.143,600 L 440,620 L 417.143,640 L 302.857,640 L 280,620 L 302.857,600"/>
+    <text font-size="12.6887" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="360" y="623.965">
+      <tspan x="360" y="623.965">Return To Idle</tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 180 540 C 180,600 360,540 360,590.264"/>
+    <polygon style="fill: #000000" points="360,597.764 355,587.764 360,590.264 365,587.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360,597.764 355,587.764 360,590.264 365,587.764 "/>
+  </g>
+</svg>
