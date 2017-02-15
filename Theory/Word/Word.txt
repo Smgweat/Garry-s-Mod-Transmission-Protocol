@@ -1,1 +1,3 @@
-The basic unit of data transmitted per cycle is the word, which is just any data we want to send converted to a 32-bit integer format. We send data in this format because wire communication devices send things not in binary but in numbers.
+The basic unit of data transmitted per cycle is the word, which is just any data we want to send converted to a 32-bit integer format.
+
+We send data in this format because wire communication devices send things not in binary but in numbers.
