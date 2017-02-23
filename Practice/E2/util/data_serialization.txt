@@ -1,0 +1,76 @@
+
+function table fromVectorArray( A:table ) {
+    local B = table()
+    for( I = 1, A:count() ) {
+        local V = A[I,vector]
+        B:pushNumber(V[1])
+        B:pushNumber(V[2])
+        B:pushNumber(V[3])
+    }
+    return B
+}
+
+function table toVectorArray( A:table ) {
+    local B = table()
+    for( I = 1, A:count()/3 ) {
+        local V = vec()
+        for(J=1,3){
+            V[J]=A[(I-1)*3+J,normal]
+        }
+        B:pushVector(V)
+    }
+    return B
+}
+
+# the maximum amount of characters that the e2 can simultaniously converted
+# to a compressed byte array and back again is
+# 132 characters
+
+
+function table compressByteArray( A:table ) {
+    local B = table()
+    for( I = 1, ceil( A:count()/4 ) ) {
+        local Word = 0
+        for( J = 1, 4 ) {
+            local Index = J + (I-1)*4
+            local Bits = (4-J)*8
+            if( Index > A:count() ) { break }
+            Word += A[Index,number]<<Bits
+        }
+        B:pushNumber( Word )
+    }
+    return B
+}
+
+function table unCompressByteArray( A:table ) {
+    local B = table()
+    for( I = 1, A:count() ) {
+        for( J = 1, 4 ) {
+            local Bits = (4-J)*8
+            local Val = ( A[I,normal]>>Bits ) % (2^8)
+            B:pushNumber( Val )
+        }
+    }
+    return B
+}
+
+function table toByteArray( S:string, Compress ) {
+    local A = table()
+    for( I = 1, S:length() ) {
+        A:pushNumber( toByte(S[I]) )
+    }
+    if( Compress ) { return compressByteArray( A ) }
+    else { return A }
+}
+
+function string fromByteArray( A:table, Compressed ) {
+    local String = ""
+    local B = table()
+    if( Compressed ) { B = unCompressByteArray( A ) }
+    else { B = A }
+    for( I = 1, B:count() ) {
+        local Byte = B[I,normal]
+        String += toChar(Byte)
+    }
+    return String
+}

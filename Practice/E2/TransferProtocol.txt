@@ -1,0 +1,170 @@
+@name Array Transmission
+@inputs In Clock Transmit Dest Typ [DataOut]:table
+@outputs Out [DataIn]:table
+@outputs [State]:string
+@outputs [PacketIn PacketOut PacketOutStack PacketInStack Flags]:table
+@outputs DataCounter Address
+
+if( duped() | dupefinished() ) { reset() }
+
+if( first() ) {
+    
+    State = "Idle"
+    
+    Address = entity():id() % 256
+    setName( Address:toString() )
+    
+    #include "util/data_serialization"
+    
+    function table encodePacket( D:table, Destination, Type ) {
+        Header = ( Address << 24 ) + ( Destination << 16 ) + ( D:count() << 8 ) + Type
+        local EncodedData = table()
+        switch( Type ) {
+            
+            # case 2 is a plain number array
+            
+            case 3, #vector array
+                EncodedData = fromVectorArray(D)
+            break
+            
+            default,
+                EncodedData = D
+            break
+            
+        }
+        local B = table(Header):add(EncodedData)
+        return B
+        
+    }
+    
+    function void pushPacket( P:table ) {
+        PacketOutStack:pushTable( P )
+    }
+    
+    function table decodePacket( P:table ) {
+        
+        local Header = P[1,normal]
+        local Source = (Header>>24) % (2^8)
+        local Dest = (Header>>16) % (2^8)
+        local Size = (Header>>8) % (2^8)
+        local Type = Header % (2^8)
+        
+        #local Info = table( Source, Dest, Size, Type )
+        local R = P
+        R:shift()
+        local Data = R
+        local DecodedData = table()
+        
+        switch( Type ) {
+            
+            case 3,
+                DecodedData = toVectorArray( Data )
+            break
+            
+            default,
+                DecodedData = Data
+            break
+            
+        }
+        
+        return DecodedData
+        
+    }
+    
+    function void setFlag( F:string, N ) {
+        Flags[F,normal] = N
+    }
+    
+    function normal getFlag( F:string ) {
+        return Flags[F,normal]
+    }
+    
+}
+
+if( ~Transmit && Transmit ) {
+    local P = encodePacket( DataOut, Dest, Typ )
+    pushPacket( P )
+    
+}
+
+if( PacketIn & !getFlag("Receiving") ) {
+    DataIn = decodePacket( PacketIn )
+    #PacketIn = table()
+}
+
+# if the current execution was caused by the change in clock state 
+if( ~Clock ) {
+    
+    local RisingEdge = $Clock == 1
+    local FallingEdge = $Clock == -1
+    
+    # transmissions on the rising edge
+    # receptions on the falling edge
+    # clock is a square wave generator ( does not have to be evenly spaced, just needs to only include values 0 and 1 )
+    
+    switch( State ) {
+        
+        case "Idle",
+            # if the target address is you
+            if( ((In>>16)%(2^8))==Address & FallingEdge ) {
+                
+                setFlag( "Receiving", 1 )
+                
+                PacketIn = table()
+                PacketIn:pushNumber( In )
+                DataCounter = (In>>8)%(2^8) # gets the body size
+                
+                State = "Receive"
+                
+            }
+            elseif( PacketOutStack:count() > 0 & RisingEdge ) {
+                
+                State = "InitTransmission"
+                setFlag( "Transmitting", 1 )
+                
+            }
+        break
+        
+        case "Receive",
+            if( FallingEdge ) {
+                # if you reach the end of the data
+                if( DataCounter < 1 ) {
+                    State = "Idle"
+                    setFlag( "Receiving", 0 )
+                }
+                # otherwise keep reading
+                else {
+                    PacketIn:pushNumber( In )
+                    DataCounter--
+                }
+            }
+        break
+        
+        case "InitTransmission",
+            if( RisingEdge ) {
+                # Transmit the packet at the bottom of the outbound stack
+                PacketOut = PacketOutStack[1,table], PacketOutStack:shift()
+                DataCounter = 2
+                Out = PacketOut[1,normal]
+                State = "Transmit"
+            }
+        break
+        
+        case "Transmit",
+            if( RisingEdge ) {
+                # if you still have stuff left to send
+                if( DataCounter < PacketOut:count() ) {
+                    Out = PacketOut[DataCounter,normal]
+                    DataCounter++
+                }
+                # if you are done sending
+                else {
+                    State = "Idle"
+                    Out = 0
+                    setFlag( "Transmitting", 0 )
+                }
+            }
+        break
+        
+    }
+}
